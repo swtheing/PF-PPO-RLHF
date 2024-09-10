@@ -19,10 +19,11 @@ save_path=./ckpt/7b_llama_ppo_eb4_multi/
 rollout_batch_size=2048
 output_file=test_he.jsonl
 test_file=HumanEval-10-instruction-llama.jsonl
-
+```
 Then, run the script:
 ```bash
 sh combine_train_ana.sh
+```
 ## Performance
 
 | Family                      | Method                              | HumanEval | MBPP  | LeetCode |
