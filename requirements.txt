@@ -1,0 +1,19 @@
+bitsandbytes
+datasets
+deepspeed==0.13.5
+einops
+# flash-attn==2.5.8
+isort
+jsonlines
+loralib
+optimum
+packaging
+peft
+ray[default]==2.12.0
+torch
+torchmetrics
+tqdm
+transformers==4.41.0
+transformers_stream_generator
+wandb
+wheel
