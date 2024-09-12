@@ -12,6 +12,7 @@ Credit: Wei Shen ([@swtheing](https://github.com/swtheing)), Chuheng Zhang ([zha
 ## Quick Start
 
 ### PF-PPO
+#### PF-PPO-Reweight Version
 You need to set the following parameters in the `combine_train_ana.sh` first, like:
 
 ```bash
@@ -24,6 +25,20 @@ Then, run the script:
 ```bash
 sh combine_train_ana.sh
 ```
+#### PF-PPO-Filter Version
+You need to build openrlhf_filter version, then
+
+```bash
+save_path=./ckpt/7b_llama_ppo_eb4_multi/
+rollout_batch_size=2048
+output_file=test_he.jsonl
+test_file=HumanEval-10-instruction-llama.jsonl
+```
+Then, run the script:
+```bash
+mv openrlhf_filter openrlhf
+sh build_openrlhf.sh
+sh combine_train_ana.sh
 ## Performance
 
 | Family                      | Method                              | HumanEval | MBPP  | LeetCode |
