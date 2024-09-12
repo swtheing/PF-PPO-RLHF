@@ -1,6 +1,6 @@
 # Policy Filtration in RLHF to Fine-Tune LLM for Code Generation
 
-Paper link:
+Paper link: https://arxiv.org/abs/2409.06957
 
 Author's code: [PF-PPO](https://github.com/swtheing/OpenRLHF_Tool)
 
