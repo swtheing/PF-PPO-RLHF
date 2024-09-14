@@ -214,15 +214,15 @@ def _get_reward_model(base_pretrained_model, base_llm_model):
                 # normalize reward in eval mode
                 # reward = torch.where(reward > 5.0, torch.tensor(1.0, dtype=reward.dtype), torch.tensor(0.0, dtype=reward.dtype))
                 if self.normalize_reward:
-                    self.mean = torch.mean(reward)
-                    self.std = torch.std(reward)
-                    if self.std == 0.0:
-                        self.std = torch.tensor(1.0) 
+                    #self.mean = torch.mean(reward)
+                    #self.std = torch.std(reward)
+                    #if self.std == 0.0:
+                    #    self.std = torch.tensor(1.0) 
                     #print("reward_norm:")
                     #print(self.mean)
                     #print(self.std)
                     #reward = reward - self.mean
-                    reward = (reward - self.mean) / torch.sqrt(self.std)
+                    reward = (reward - self.mean) / self.std
             if return_output:
                 return reward, outputs
             else:
